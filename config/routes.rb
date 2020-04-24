@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   namespace :admin do
     devise_for :users
     get '/top'
-    resources :items, only: [:index, ,:new, :create, :show, :edit, :update]
+    resources :items, only: [:index,:new, :create, :show, :edit, :update]
     resources :genres, only:[:index, :create, :edit, :update]
     resources :end_users, only:[:index, :create, :edit, :update]
     resources :orders, only: [:index, :show, :update]
