@@ -3,15 +3,11 @@ class EndUser < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  with_options presence: true do
-  	validates :first_name
-  	validates :last_name
-  	validates :first_name_kana
-  	validates :last_name_kana
-  	validates :postal_code
-  	validates :address
-  	validates :phone_number
-  	validates :encrypted_password
-  	validates :password_confirmation
-  end
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :first_name_kana, presence: true
+  validates :last_name_kana, presence: true
+  validates :postal_code, presence: true
+  validates :address, presence: true
+  validates :phone_number, presence: true
 end

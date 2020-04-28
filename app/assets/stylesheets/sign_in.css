@@ -45,7 +45,8 @@ table{
   width: 25%;
 }
 .session-table-box{
-  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +55,8 @@ table{
   height: 50px;
 }
 .registration-table-box{
-  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

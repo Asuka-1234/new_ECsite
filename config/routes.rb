@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     registrations: 'end_users/registrations',
     sessions: 'end_users/sessions'
   }
-  devise_for :admins, controllers:{
+  devise_for :admin, controllers:{
     sessions: 'admins/sessions'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
