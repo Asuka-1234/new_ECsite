@@ -1,0 +1,54 @@
+<div class="container main">
+  <div class="row contain"></div>
+  <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-4 headline">
+      <p class="registration">会員の方はこちらからログイン</p>
+    </div>
+    <div class="col-xs-6"></div>
+  </div>
+  <div class="row session-table-box">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-6">
+      <div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>メールアドレス</td>
+              <td><%= f.email_field :email, autofocus: true, autocomplete: "email" , class: 'form'%></td>
+            </tr>
+            <tr>
+              <td>パスワード</td>
+              <td><%= f.password_field :password, autocomplete: "current-password", class: 'form' %></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="actions text">
+          <%= f.submit "ログイン", class: 'btn btn-primary w-25' %>
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <%= link_to "=>パスワードを忘れた方はこちら", new_password_path(resource_name) %>
+          <% end %>
+        </div>
+
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-3 headline">
+      <p class="registration">登録がお済み出ない方</p>
+    </div>
+    <div class="col-xs-7"></div>
+  </div>
+  <div class="row row2">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-8 text">
+      <%= render "end_users/shared/links" %>
+    </div>
+  </div>
+</div>

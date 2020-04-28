@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NaganoCake</title>
+    <link rel="stylesheet", href="assets/stylesheets/headline.css">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container header">
+      
+        <% if end_user_signed_in? %>
+        <div class="row head">
+          <div class="col-xs-2">
+            <div class="logo">
+              <%= link_to public_items_top_path do %>
+              <span>LOGO</span>
+              <% end %>
+          </div>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <ul class="nav navbar-nav navbar-right" role-"tablist">
+              <li class="list btn btn-default">
+                <%= link_to  public_end_users_path do %>
+                <span>マイページ</span>
+                <% end %>
+              </li>
+              <li class="list btn btn-default">
+                <span>商品一覧</span>
+              </li>
+              <li class="list btn btn-default">
+                <span>カート</span>
+              </li>
+              <li class="list btn btn-default">
+                <%= link_to  destroy_end_user_session_path, method: :delete do %>
+                <span>ログアウト</span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% elsif admin_signed_in? %>
+        <div class="row head">
+          <div class="col-xs-2">
+            <div class="logo">
+              <%= link_to admin_top_path do %>
+              <span>LOGO</span>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <ul class="nav navbar-nav navbar-right" role-"tablist">
+              <li class="admin-list btn btn-default">
+                <span>商品一覧</span>
+              </li>
+              <li class="admin-list btn btn-default">
+                <span>会員一覧</span>
+              </li>
+              <li class="admin-list btn btn-default">
+                <span>注文履歴一覧</span>
+              </li>
+              <li class="admin-list btn btn-default">
+                <span>ジャンル一覧</span>
+              </li>
+              <li class="admin-list btn btn-default">
+                <%= link_to destroy_admin_session_path, method: :delete do %>
+                <span>ログアウト</span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% else %>
+        <div class="row head">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2">
+            <div class="logo">
+              <%= link_to public_items_top_path do %>
+              <span>LOGO</span>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-xs-2"></div>
+          <div class="col-xs-6">
+            <ul class="nav navbar-nav navbar-right" role-"tablist">
+              <li class="list btn btn-default">
+                <span>商品一覧</span>
+              </li>
+              <li class="list btn btn-default">
+                <%= link_to new_end_user_registration_path, class:'link' do %>
+                <span>新規登録</span>
+                <% end %>
+              </li>
+              <li class="list btn btn-default">
+                <%= link_to new_end_user_session_path, class:'link' do %>
+                <span>ログイン</span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-1"></div>
+        </div>
+        <% end %>
+    
+    </div>
+    <%= yield %>
+  </body>
+</html>

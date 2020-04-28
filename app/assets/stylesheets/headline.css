@@ -1,0 +1,31 @@
+.header{
+	margin-top: 20px;
+	height: 150px;
+}
+.logo{
+	padding: 10px 0px;
+	margin: 50px 0px;
+	border: solid 1px #eeeeee;
+	text-align: center;
+	border-radius: 5px;
+}
+.nav{
+	margin-top: 20px;
+}
+.list{
+	margin: 50px 50px 0 0;
+	padding: 0;
+}
+.admin-list{
+	margin: 50px 20px 0 0;
+}
+.head{
+	padding-bottom: 50px;
+}
+.navbar-nav > li > a{
+	padding-top: 0;
+}
+.nav > li > a{
+	display: inline;
+	padding: 0;
+}

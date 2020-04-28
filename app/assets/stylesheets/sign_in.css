@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  margin-top: 20px;
+}
+body{
+  margin: 50px 0;
+}
+table{
+  border-spacing: 5px 10px;
+}
+.row1{
+  padding-top: 40px;
+}
+.row2{
+  padding-bottom: 40px;
+}
+.container{
+  width: 100px;
+  border: 3px solid #eeeeee;
+  border-radius: 5px;
+}
+.registration{
+  background-color: #eeeeee;
+  font-size: 15px;
+}
+.new{
+  background-color: #eeeeee;
+  font-size: 20px;
+}
+.headline{
+  text-align: center;
+}
+.form{
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.w-50{
+  width: 50%;
+}
+.w-25{
+  width: 25%;
+}
+.session-table-box{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contain{
+  height: 50px;
+}
+.registration-table-box{
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  font-size: 16px;
+}
+.admin-table-box{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
