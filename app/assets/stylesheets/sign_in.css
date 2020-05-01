@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 header{
   margin-top: 20px;
 }
@@ -69,4 +74,133 @@ table{
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< Updated upstream
 }
+=======
+}
+.strong{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.td-headline{
+  width: 170px;
+  background-color: #cccccc;
+}
+.td-headline1{
+  width: 200px;
+}
+.td-body{
+  width: 400px;
+}
+.bottun{
+  margin-right: 10px;
+}
+.table-bottun{
+  text-align: center;
+  margin-top: 10px;
+}
+.text{
+  text-align: center;
+}
+.withdraw1{
+  display: inline-block;
+  margin-left: 30px;
+}
+.thead-headline{
+  background-color: #cccccc;
+  height: 30px;
+}
+.td-index1{
+  width: 150px;
+  padding-left: 10px;
+}
+.td-index2{
+  width: 300px;
+  padding-left: 20px;
+}
+.td-index3{
+  width: 300px;
+  padding-left: 30px;
+}
+.td-index4{
+  width: 300px;
+  text-align: center;
+}
+.status{
+  margin: 0;
+  padding: 3px 0;
+}
+.user-index-table{
+  border-width: 1px 0;
+}
+.user-index{
+  border-color: #eeeeee;
+  border-style: solid;
+  border-width: 1px 0;
+}
+.genre-table{
+  padding-left: 10px;
+}
+.td-index{
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.td-index:nth-child(3){
+  width: 150px;
+}
+.genre-table{
+  height: 10px;
+}
+.genre-button{
+  margin-top: 10px;
+}
+.td-genre-table{
+  width: 150px;
+}
+ .td-genre-table2{
+  width: 300px;
+ }
+ .th-item{
+  padding-left: 10px;
+ }
+ .th-item:nth-child(1){
+  width: 70px;
+ }
+ .th-item:nth-child(3){
+  width: 100px;
+ }
+ .th-item:nth-child(4){
+  width: 150px;
+ }
+ .th-item:nth-child(5){
+  width: 150px;
+ }
+ .th-item{
+  padding-right: 20px 
+  padding-left: 40px;
+ }
+ .td-item{
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  padding-left: 10px;
+ }
+ .item-table{
+  border-color: #eeeeee;
+  border-style: solid;
+  border-width: 1px 0;
+ }
+ .sales-status{
+  margin: 0;
+ }
+ .item{
+  float: left;
+ }
+ .user-item-detail{
+  margin-right: 10px;
+ }
+ .search{
+  border: solid 1px;
+  border-color: #eeeeee;
+ }
+>>>>>>> Stashed changes

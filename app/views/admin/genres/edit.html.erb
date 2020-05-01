@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row row1 row2">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-2 text">
+			<p class="gray">ジャンル編集</p>
+		</div>
+		<div class="col-xs-9"></div>
+	</div>
+	<div class="row row2">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-7">
+			<%= form_for @genre, :url => {:action => :update} do |f| %>
+			<table>
+				<tr>
+					<td class="genre-table"><%= f.label :ジャンル %></td>
+					<td class="genre-table"><%= f.text_field :name %></td>
+					<td class="genre-table"><%= f.radio_button :effectiveness_status, true %>有効</td>
+					<td class="genre-table"><%= f.radio_button :effectiveness_status, false %>無効</td>
+					<td class="genre-table"><%= f.submit "変更を保存する", class: "btn btn-primary" %></td>
+				</tr>
+			</table>
+			<% end %>
+		</div>
+		<div class="col-xs-4"></div>
+	</div>
+</div>

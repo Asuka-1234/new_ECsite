@@ -1,0 +1,2 @@
+module Adimn::ItemsHelper
+end

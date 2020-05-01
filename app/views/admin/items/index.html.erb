@@ -1,0 +1,49 @@
+<div class="conteiner">
+	<div class="row row1 row2">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-2 text">
+			<p class="gray">商品一覧</p>
+		</div>
+		<div class="col-xs-5"></div>
+		<div class="col-xs-3">
+			<%= link_to new_admin_item_path do %>
+			  <i class="fas fa-plus-circle fa-3x"></i>
+			<% end %>
+		</div>
+	</div>
+	<div class="row row2">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-8">
+			<table>
+				<thead class="thead-headline">
+					<tr>
+						<th class="th-item">商品ID</th>
+						<th class="th-item">商品名</th>
+						<th class="th-item">税抜価格</th>
+						<th class="th-item">ジャンル</th>
+						<th class="th-item">ステータス</th>
+					</tr>
+				</thead>	
+				<tbody>
+					<% @items.each do |item| %>
+					<tr class="item-table">
+						<td class="td-item"><%= item.id %></td>
+						<td class="td-item"><%= item.name %></td>
+						<td class="td-item"><%= item.price %></td>
+						<td class="td-item"><%= item.genre.name %></td>
+						<td class="td-item">
+							<% if item.sales_status == false %>
+							<p class="sales-status">販売停止中</p>
+							<% else %>
+							<p class="sales-status">販売中</p>
+							<% end %>		
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xs-2"></div>
+	</div>
+	
+</div>
