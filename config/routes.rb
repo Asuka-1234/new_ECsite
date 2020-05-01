@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   namespace :public do
     get '/items/top'
     resources :items, only: [:index, :show]
-    resource :end_users, only: [:update, :create]
+    resource :end_users, only: [:update, :create, :edit]
     get '/end_users', to: 'end_users#show'
     get '/end_users/confirm', to: 'end_users#confirm'
-    delete '/end_users', to: 'end_users#withdraw'
+    delete '/end_users', to: 'end_users#withdraw', as: "withdraw_end_users"
     #get '/end_users/top'
     #delete '/cart_items/destroy_all', to: 'cart_items#destroy_all'
     #resources :cart_items
@@ -27,16 +27,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '/top', to: 'top#top'
-<<<<<<< Updated upstream
-    #resources :items, only: [:index,:new, :create, :show, :edit, :update]
-    #resources :genres, only:[:index, :create, :edit, :update]
-    #resources :end_user, only:[:index, :create, :edit, :update]
-=======
     resources :items, only: [:index,:new, :create, :show, :edit, :update]
     resources :genres, only:[:index, :create, :edit, :update]
     resources :end_users, only:[:index, :create, :edit, :update]
->>>>>>> Stashed changes
-    #resources :orders, only: [:index, :show, :update]
-    #resources :order_items, only: [:update]
   end
 end

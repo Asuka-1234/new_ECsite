@@ -17,7 +17,7 @@
         <div class="row head">
           <div class="col-xs-2">
             <div class="logo">
-              <%= link_to public_items_top_path do %>
+              <%= link_to public_end_users_path do %>
               <span>LOGO</span>
               <% end %>
           </div>
@@ -34,10 +34,8 @@
               <li class="list btn btn-default">
                 <span>カート</span>
               </li>
-              <li class="list btn btn-default">
-                <%= link_to  destroy_end_user_session_path, method: :delete do %>
-                <span>ログアウト</span>
-                <% end %>
+              <li class="list">
+                <%= link_to "ログアウト", destroy_end_user_session_path, method: :delete, class: "btn btn-default" %>
               </li>
             </ul>
           </div>
@@ -51,14 +49,14 @@
               <% end %>
             </div>
           </div>
-          <div class="col-xs-2"></div>
-          <div class="col-xs-8">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-9">
             <ul class="nav navbar-nav navbar-right" role-"tablist">
               <li class="admin-list">
                 <%= link_to "商品一覧", admin_items_path, class: "btn btn-default" %>
               </li>
-              <li class="admin-list btn btn-default">
-                <span>会員一覧</span>
+              <li class="admin-list">
+                <%= link_to "会員一覧", admin_end_users_path, class: "btn btn-default" %>
               </li>
               <li class="admin-list btn btn-default">
                 <span>注文履歴一覧</span>
@@ -66,10 +64,8 @@
               <li class="admin-list">
                 <%= link_to "ジャンル一覧", admin_genres_path, class: "btn btn-default" %>
               </li>
-              <li class="admin-list btn btn-default">
-                <%= link_to destroy_admin_session_path, method: :delete do %>
-                <span>ログアウト</span>
-                <% end %>
+              <li class="admin-list">
+                <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"btn btn-default" %>
               </li>
             </ul>
           </div>

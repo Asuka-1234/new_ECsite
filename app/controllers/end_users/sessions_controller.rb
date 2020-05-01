@@ -40,4 +40,13 @@ class EndUsers::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  private
+  def reject_user
+    @user = EndUser.find_by(email: params[:end_user][:email].downcase)
+    if @user
+      (@user.valid_password?(params[:end_user][:password]) && (@user.active_for_authentication? == false))
+      redirect_to new_end_user_session_path
+    end
+  end
+
 end

@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row row1 row2">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-2 text">
+			<p class="gray">会員一覧</p>
+		</div>
+		<div class="col-xs-8"></div>
+	</div>
+	<div class="row row2">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+			<table class="user-index-table">
+				<thead>
+					<tr class="thead-headline">
+						<th>会員ID</th>
+						<th>氏名</th>
+						<th>メールアドレス</th>
+						<th>ステータス</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @users.each do |user| %>
+					<tr class="user-index">
+						<td class="td-index1"><%= user.id %></td>
+						<td class="td-index2"><%= user.first_name %><%= user.last_name %></td>
+						<td class="td-index3"><%= user.email %></td>
+						<td class="td-index4">
+							<% if user.is_unsubscribed == false %>
+								<p class="status">有効</p>
+							<% else %>
+							    <p class="status">退会済み</p>
+							<% end %>
+							</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-xs-3"></div>
+	</div>
+</div>
