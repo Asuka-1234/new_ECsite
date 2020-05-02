@@ -31,8 +31,8 @@
               <li class="list">
                 <%= link_to "商品一覧",public_items_path, class: "btn btn-default" %>
               </li>
-              <li class="list btn btn-default">
-                <span>カート</span>
+              <li class="list">
+                <%= link_to "カート", public_cart_items_path, class: "btn btn-default" %>
               </li>
               <li class="list">
                 <%= link_to "ログアウト", destroy_end_user_session_path, method: :delete, class: "btn btn-default" %>

@@ -6,6 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Admin.create!(
-	email: "abc@abc",
-	password: "abcabc"
+	email: "p@p",
+	password: "aaaaaa"
 )
+
+Genre.create!(
+		name: "ジャンル"
+)
+
+3.times do |i|
+	Item.create!(
+		genre_id: "1",
+		name: "おかし#{i+1}",
+		description: "説明文#{i+1}",
+		price: "#{i+1}00"
+	)
+end

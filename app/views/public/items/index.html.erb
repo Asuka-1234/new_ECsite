@@ -5,21 +5,22 @@
 			<div>ジャンル検索</div>
 			<div></div>
 		</div>
-		<div class="col-xs-1"></div>
-		<div class="col-xs-8 clearfix">
-			<div>
+		<div class="col-xs-9 clearfix">
+			<div class="public-item-index">
+			  <div>
 				<h3>商品一覧</h3>
-			</div>
-			<div>
+			  </div>
+			  <div>
 				<% @items.each do |item| %>
 				<div class="item user-item-detail">
 					<div>
-					    <%= attachment_image_tag item, :image, size: "130x90", fallback: "no_image.png" %>
+					    <%= link_to (attachment_image_tag item, :image, size: "130x90", fallback: "no_image.png"), public_item_path(item) %>
 					</div>
 					<p><%= item.name %></p>
 					<div>￥<%= item.price %></div>
 				</div>
 				<% end %>
+			  </div>
 			</div>
 		</div>
 	</div>

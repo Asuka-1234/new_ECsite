@@ -1,2 +1,30 @@
-<h1>Public::Items#show</h1>
-<p>Find me in app/views/public/items/show.html.erb</p>
+<div class="container">
+	<div class="row row1 row2">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-8 clearfix">
+			<div class="item-box">
+			<%= attachment_image_tag @item, :image, size: "300x200",  fallback: "no_image.png" %>
+			</div>
+			<div class="item-box">
+				<h3><%= @item.name %></h3>
+				<div class="span">
+					<%= @item.description %>
+				</div>
+				<p class="span">￥<%= @item.price %>(税込み)</p>
+				<%= form_for @cart_item, :url => {controller: "cart_items", action: "index" } do |f| %>
+				<div>
+					<span class="item-amount">
+					  <%= f.hidden_field :item_id, :value => @item.id %>
+					  <!--<%= hidden_field_tag :item_id, @item.id %>-->
+					  <%= f.select :amount, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] %>
+					</span>
+					<span>
+						<%= f.submit "カートに入れる", class: "btn btn-primary" %>
+					</span>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-1"></div>
+	</div>
+</div>

@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     get '/end_users/confirm', to: 'end_users#confirm'
     delete '/end_users', to: 'end_users#withdraw', as: "withdraw_end_users"
     #get '/end_users/top'
-    #delete '/cart_items/destroy_all', to: 'cart_items#destroy_all'
-    #resources :cart_items
+    delete '/cart_items/destroy_all', to: 'cart_items#destroy_all', as: "cart_items_destroy_all"
+    resources :cart_items, only: [:index, :update, :create, :destroy]
     #resources :orders, only: [:new, :index, :create, :show]
     #get '/orders/comfirm'
     #get '/orders/complete'
