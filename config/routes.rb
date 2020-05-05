@@ -14,13 +14,12 @@ Rails.application.routes.draw do
     get '/end_users', to: 'end_users#show'
     get '/end_users/confirm', to: 'end_users#confirm'
     delete '/end_users', to: 'end_users#withdraw', as: "withdraw_end_users"
-    #get '/end_users/top'
     delete '/cart_items/destroy_all', to: 'cart_items#destroy_all', as: "cart_items_destroy_all"
     resources :cart_items, only: [:index, :update, :create, :destroy]
-    #resources :orders, only: [:new, :index, :create, :show]
-    #get '/orders/comfirm'
-    #get '/orders/complete'
-    #resources :addresses, only: [:index, :edit, :create, :update, :destroy]
+    get '/orders/complete'
+    post '/orders/confirm'
+    resources :orders, only: [:new, :index, :create, :show]
+    resources :addresses, only: [:index, :edit, :create, :update, :destroy]
   end
 
   root 'public/items#top'
@@ -30,5 +29,7 @@ Rails.application.routes.draw do
     resources :items, only: [:index,:new, :create, :show, :edit, :update]
     resources :genres, only:[:index, :create, :edit, :update]
     resources :end_users, only:[:index, :create, :edit, :update]
+    resources :orders, only: [:index, :show, :update]
+    patch '/orders/detail_update/:id', to: 'orders#detail_update', as: 'orders_detail_update'
   end
 end

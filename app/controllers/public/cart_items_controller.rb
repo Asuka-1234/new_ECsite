@@ -13,6 +13,7 @@ class Public::CartItemsController < ApplicationController
     else
       @cart_item.save
     end 
+    flash[:notice] = nil
   	redirect_to public_cart_items_path
   end
 

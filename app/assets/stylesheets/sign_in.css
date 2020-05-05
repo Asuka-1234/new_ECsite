@@ -190,7 +190,7 @@ table{
   padding-bottom: 10px; 
   padding-left: 10px;
  }
- .item-table{
+ .item-tables{
   border-color: #eeeeee;
   border-style: solid;
   border-width: 1px 0;
@@ -235,14 +235,14 @@ table{
 .th-cart-item:nth-child(1){
   width: 300px;
 }
-.cart-item-table{
+.items-table{
   background-color: #eeeeee;
 }
 .image{
   margin-right: 20px;
 }
 .item-name{
-  margin\top: 10px;
+  margin-top: 10px;
   font-size: 15px;
 }
 .total-table{
@@ -259,4 +259,72 @@ table{
 .total-payment{
   background-color: #eeeeee;
   font-size: 10px;
+}
+.row3{
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.order-headline{
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.order-detail{
+  padding-left: 30px;
+}
+.th-confirm{
+  padding-left: 10px;
+  width: 90px;
+}
+.th-confirm:nth-child(1){
+  width: 250px;
+}
+.td-confirm{
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+.confirm-detail{
+  padding: 5px 10px;
+}
+.confirm-detail:nth-child(1){
+  width: 200px;
+}
+.confirm{
+  padding: 5px 10px;
+}
+.complete{
+  font-size: 20px;
+}
+.th-index-box{
+  width: 150px;
+  padding: 10px 0 10px 10px;
+}
+.admin-user-detail{
+  font-size: 18px;
+  padding: 10px;
+}
+ .th-detail-item{
+  padding: 10px;
+ }
+ .td-detail-item{
+  width: 100px;
+  padding: 5px;
+  padding-left: 10px;
+ }
+ .td-detail-item:nth-child(1){
+  width: 150px;
+ }
+ .td-detail-item:nth-child(5){
+  padding-left: 30px;
+ }
+.font{
+  font-size: 15px;
+}
+.production-status{
+  width: 250px;
+  padding-left: 30px;
+}
+.error-text{
+  color: red;
+  font-size: 13px;
 }
