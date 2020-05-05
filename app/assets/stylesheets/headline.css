@@ -29,3 +29,10 @@
 	display: inline;
 	padding: 0;
 }
+.search-for{
+	margin-top: 10px;
+}
+.search-for-form{
+	padding-top: 15px;
+	padding-left: 400px;
+}

@@ -51,6 +51,7 @@
           </div>
           <div class="col-xs-1"></div>
           <div class="col-xs-9">
+            <div>
             <ul class="nav navbar-nav navbar-right" role-"tablist">
               <li class="admin-list">
                 <%= link_to "商品一覧", admin_items_path, class: "btn btn-default" %>
@@ -68,7 +69,13 @@
                 <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class:"btn btn-default" %>
               </li>
             </ul>
-          </div>
+            </div>
+              <div class="search-for-form">
+              <%= form_with(url: admin_items_path, local: true, method: :get) do |f| %>
+                <%= f.text_field :name, class:"search-for" %>
+                <%= f.submit "Search" %>
+              <% end %>
+            </div>
         </div>
         <% else %>
         <div class="row head">
