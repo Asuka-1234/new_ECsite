@@ -1,8 +1,7 @@
 class Admin::ItemsController < ApplicationController
   def index
-  	#@itemss = Item.all
+  	#@items = Item.all
     @items = Item.search(params[:name]) 
-    p @items
   end
 
   def new
